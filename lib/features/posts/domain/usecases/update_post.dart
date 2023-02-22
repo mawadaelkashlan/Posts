@@ -6,7 +6,7 @@ import '../entities/post_entity.dart';
 class UpdatePostUsecase{
   final PostsRepository repository;
 
-  UpdatePostUsecase(this.repository);
+  UpdatePostUsecase({required this.repository});
   Future<Either<Failure , Unit>> call(Post post ) async {
     return repository.updatePost(post);
   }

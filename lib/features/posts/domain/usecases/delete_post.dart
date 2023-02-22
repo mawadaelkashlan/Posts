@@ -6,7 +6,7 @@ import '../../../../core/error/failures.dart';
 class DeletePostUseCase {
   final PostsRepository repository;
 
-  DeletePostUseCase(this.repository);
+  DeletePostUseCase({required this.repository});
   Future<Either<Failure , Unit>> call(int postId) async {
     return repository.deletePost(postId);
   }

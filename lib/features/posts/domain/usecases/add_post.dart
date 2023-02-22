@@ -7,7 +7,7 @@ import '../../../../core/error/failures.dart';
 class AddPostUsecase{
   final PostsRepository repository;
 
-  AddPostUsecase(this.repository);
+  AddPostUsecase({required this.repository});
   Future<Either<Failure , Unit>> call(Post post) {
     return repository.addPost(post);
   }

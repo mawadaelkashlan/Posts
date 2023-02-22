@@ -7,7 +7,7 @@ import '../entities/post_entity.dart';
 class GetAllPostsUsecase{
   final PostsRepository repository;
 
-  GetAllPostsUsecase(this.repository);
+  GetAllPostsUsecase({required this.repository});
   Future<Either<Failure , List<Post>>> call() async {
     return await repository.getAllPosts();
   }
